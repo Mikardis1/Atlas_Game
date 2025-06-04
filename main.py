@@ -10,7 +10,7 @@ while map < 1 or map > 3:
 
 # Minus 1 because I am using a list
 map -= 1
-#By Selecting a map i'm going to select a different path: different map,  different csv file, differents states to learn
+#By Selecting a map i'm going to select a different path: different map,  different csv file, differents countries to learn
 country_maps = ["europe_map", "asia_map", "usa_map"]
 
 screen = turtle.Screen()
@@ -21,7 +21,7 @@ turtle.shape(f"./maps/{country_maps[map]}.gif") # It will show the image gif on 
 
 data = pandas.read_csv(f"./files/{country_maps[map]}.csv")
 
-all_countries = data.countries.to_list() #Convertion data["state"] into a list
+all_countries = data.countries.to_list() #Convertion data["countries"] into a list
 
 
 
@@ -36,24 +36,22 @@ while len(guessed_countries) < len(all_countries):
         missing_countries = [country for country in all_countries if country not in guessed_countries] # Using Dictionary comprehension
         new_data = pandas.DataFrame(missing_countries)
 
-        #Creatingg a csv file for each country with the countries or states to learn
+        #Creatingg a csv file for each country with the countries to learn
         new_data.to_csv(f"./files/{country_maps[map]}_to_learn.csv")  # It will create a new .csv file with that name
         break
 
 
-    #if answer_state is one of the states in all the states of the usa_map.csv
-        #if they got it right:
-            #Create a turtle to write the name of the state at the states x and y coordenate
 
-    #Using a turtle to write the answer on the map
-    if answer_country in all_countries:
+
+    #Using a turtle to write the answer on the map only if not already guessed
+    if answer_country in all_countries and answer_country not in guessed_countries:
         guessed_countries.append(answer_country)
         t = turtle.Turtle()
         t.hideturtle()
         t.penup()
         answer_data = data[data.countries == answer_country]
         t.goto(int(answer_data.x), int(answer_data.y)) # because is a row that we can use the columns too, this coordenates are str too so must be converted into int
-        t.write(answer_country) #it will write the state_name of the coordenates registered, if i put state_data it will give more information from the csv
-        #t.write(state_data.state.item()) also can be used instead of the one above, it will bring the first element of the row
+        t.write(answer_country) #it will write the country_name of the coordenates registered, if i put country_data it will give more information from the csv
+
 
 screen.exitonclick()
