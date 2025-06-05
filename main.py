@@ -3,15 +3,15 @@ import pandas
 
 map = 0
 print("Wich map do you want to learn?")
-while map < 1 or map > 3:
-    map = int(input("1. Europe map \n2. Asia\n3. USA \nChoose a map between 1 and 3: "))
-    if map < 1 or map > 3:
+while map < 1 or map > 5:
+    map = int(input("1. Europe map \n2. Asia\n3. USA \n4. South America \nChoose a map between 1 and 5: "))
+    if map < 1 or map > 5:
         print("The number you selected is out of scope. Please try again.")
 
 # Minus 1 because I am using a list
 map -= 1
 #By Selecting a map i'm going to select a different path: different map,  different csv file, differents countries to learn
-country_maps = ["europe_map", "asia_map", "usa_map"]
+country_maps = ["europe_map", "asia_map", "usa_map", "south_america_map"]
 
 screen = turtle.Screen()
 screen.title(country_maps[map].upper())
