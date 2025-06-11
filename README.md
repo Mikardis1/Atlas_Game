@@ -2,6 +2,7 @@
 
 **Atlas Game** is a geographic learning game that challenges users to guess the countries of a chosen map (Europe, Asia, USA, South America, or Africa). As users input correct answers, the country names appear on the map. When exiting, a CSV file is generated with the countries that were not guessed, allowing players to review and try again later.
 
+<<<<<<< HEAD
 ## Project Structure
 
 Atlas_Game/
@@ -27,12 +28,18 @@ Atlas_Game/
 
 
 
+=======
+>>>>>>> origin/master
 ## How It Works
 
 1. Choose a map from the options.
 2. Enter the names of countries one by one.
 3. Correct answers will appear on the map.
+<<<<<<< HEAD
 4. If you exit the game, a file named `*_to_learn.csv` will be generated with the countries you missed
+=======
+4. If you exit the game, a file named `*_to_learn.csv` will be generated with the countries you missed.
+>>>>>>> origin/master
 
 ## Folders
 
