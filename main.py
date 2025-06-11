@@ -4,14 +4,14 @@ import pandas
 map = 0
 print("Wich map do you want to learn?")
 while map < 1 or map > 5:
-    map = int(input("1. Europe map \n2. Asia\n3. USA \n4. South America \nChoose a map between 1 and 5: "))
+    map = int(input("1. Europe \n2. Asia\n3. USA \n4. South America \n5. Africa \nChoose a map between 1 and 5: "))
     if map < 1 or map > 5:
         print("The number you selected is out of scope. Please try again.")
 
 # Minus 1 because I am using a list
 map -= 1
 #By Selecting a map i'm going to select a different path: different map,  different csv file, differents countries to learn
-country_maps = ["europe_map", "asia_map", "usa_map", "south_america_map"]
+country_maps = ["europe_map", "asia_map", "usa_map", "south_america_map", "africa_map"]
 
 screen = turtle.Screen()
 screen.title(country_maps[map].upper())
@@ -55,3 +55,5 @@ while len(guessed_countries) < len(all_countries):
 
 
 screen.exitonclick()
+
+#After trying you can also check on the map_to_learn.csv the countries you missed so you can play it again and try to hit all of them
