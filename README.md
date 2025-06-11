@@ -2,28 +2,32 @@
 
 **Atlas Game** is a geographic learning game that challenges users to guess the countries of a chosen map (Europe, Asia, USA, South America, or Africa). As users input correct answers, the country names appear on the map. When exiting, a CSV file is generated with the countries that were not guessed, allowing players to review and try again later.
 
+
 ## Project Structure
 
+```
 Atlas_Game/
 ├── files/
-│   ├── africa_map.csv
-│   ├── africa_map_to_learn.csv
-│   ├── asia_map.csv
-│   ├── asia_map_to_learn.csv
-│   ├── europe_map.csv
-│   ├── europe_map_to_learn.csv
-│   ├── south_america_map.csv
-│   ├── south_america_map_to_learn.csv
-│   └── usa_map.csv
+│ ├── africa_map.csv
+│ ├── africa_map_to_learn.csv
+│ ├── asia_map.csv
+│ ├── asia_map_to_learn.csv
+│ ├── europe_map.csv
+│ ├── europe_map_to_learn.csv
+│ ├── south_america_map.csv
+│ ├── south_america_map_to_learn.csv
+│ └── usa_map.csv
 ├── maps/
-│   ├── africa_map.gif
-│   ├── asia_map.gif
-│   ├── europe_map.gif
-│   ├── south_america_map.gif
-│   └── usa_map.gif
+│ ├── africa_map.gif
+│ ├── asia_map.gif
+│ ├── europe_map.gif
+│ ├── south_america_map.gif
+│ └── usa_map.gif
 ├── main.py
 ├── README.md
 └── requirements.txt
+```
+
 
 
 
@@ -32,7 +36,11 @@ Atlas_Game/
 1. Choose a map from the options.
 2. Enter the names of countries one by one.
 3. Correct answers will appear on the map.
+<<<<<<< HEAD
 4. If you exit the game, a file named `*_to_learn.csv` will be generated with the countries you missed
+=======
+4. If you exit the game, a file named `*_to_learn.csv` will be generated with the countries you missed.
+
 
 ## Folders
 
