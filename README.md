@@ -36,10 +36,7 @@ Atlas_Game/
 1. Choose a map from the options.
 2. Enter the names of countries one by one.
 3. Correct answers will appear on the map.
-<<<<<<< HEAD
 4. If you exit the game, a file named `*_to_learn.csv` will be generated with the countries you missed
-=======
-4. If you exit the game, a file named `*_to_learn.csv` will be generated with the countries you missed.
 
 
 ## Folders
